@@ -9,6 +9,33 @@ import Todo from "./code/Todo"
 import Home from "./code/Home"
 import Header from "./code/Header"
 
+const data=[
+    {
+        title:"Title1",
+        discription:"Discription1"
+    },
+    {
+        title:"Title2",
+        discription:"Discription2"
+    },
+    {
+        title:"Title3",
+        discription:"Discription3"
+    },
+    {
+        title:"Title4",
+        discription:"Discription4"
+    },
+    {
+        title:"Title5",
+        discription:"Discription5"
+    },
+    {
+        title:"Title6",
+        discription:"Discription6"
+    },
+]
+
 const App=()=>{
     return(
         <div>
@@ -32,7 +59,7 @@ const appLayout=createBrowserRouter([
                 path:"/chips"
             },
             {
-                element:<Crousal/>,
+                element:<Crousal data={data}/>,
                 path:"/crousal"
             },
             {

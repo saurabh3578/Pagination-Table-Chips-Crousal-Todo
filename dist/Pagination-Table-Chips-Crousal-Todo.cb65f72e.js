@@ -742,23 +742,49 @@ var _home = require("./code/Home");
 var _homeDefault = parcelHelpers.interopDefault(_home);
 var _header = require("./code/Header");
 var _headerDefault = parcelHelpers.interopDefault(_header);
+const data = [
+    {
+        title: "Title1",
+        discription: "Discription1"
+    },
+    {
+        title: "Title2",
+        discription: "Discription2"
+    },
+    {
+        title: "Title3",
+        discription: "Discription3"
+    },
+    {
+        title: "Title4",
+        discription: "Discription4"
+    },
+    {
+        title: "Title5",
+        discription: "Discription5"
+    },
+    {
+        title: "Title6",
+        discription: "Discription6"
+    }
+];
 const App = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 15,
+                lineNumber: 42,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 16,
+                lineNumber: 43,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "App.js",
-        lineNumber: 14,
+        lineNumber: 41,
         columnNumber: 9
     }, undefined);
 };
@@ -767,7 +793,7 @@ const appLayout = (0, _reactRouterDom.createBrowserRouter)([
     {
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
             fileName: "App.js",
-            lineNumber: 23,
+            lineNumber: 50,
             columnNumber: 17
         }, undefined),
         path: "/",
@@ -775,7 +801,7 @@ const appLayout = (0, _reactRouterDom.createBrowserRouter)([
             {
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _homeDefault.default), {}, void 0, false, {
                     fileName: "App.js",
-                    lineNumber: 27,
+                    lineNumber: 54,
                     columnNumber: 25
                 }, undefined),
                 path: "/"
@@ -783,15 +809,17 @@ const appLayout = (0, _reactRouterDom.createBrowserRouter)([
             {
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _chipsDefault.default), {}, void 0, false, {
                     fileName: "App.js",
-                    lineNumber: 31,
+                    lineNumber: 58,
                     columnNumber: 25
                 }, undefined),
                 path: "/chips"
             },
             {
-                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _crousalDefault.default), {}, void 0, false, {
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _crousalDefault.default), {
+                    data: data
+                }, void 0, false, {
                     fileName: "App.js",
-                    lineNumber: 35,
+                    lineNumber: 62,
                     columnNumber: 25
                 }, undefined),
                 path: "/crousal"
@@ -799,7 +827,7 @@ const appLayout = (0, _reactRouterDom.createBrowserRouter)([
             {
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _paginationDefault.default), {}, void 0, false, {
                     fileName: "App.js",
-                    lineNumber: 39,
+                    lineNumber: 66,
                     columnNumber: 25
                 }, undefined),
                 path: "/pagination"
@@ -807,7 +835,7 @@ const appLayout = (0, _reactRouterDom.createBrowserRouter)([
             {
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _tableDefault.default), {}, void 0, false, {
                     fileName: "App.js",
-                    lineNumber: 43,
+                    lineNumber: 70,
                     columnNumber: 25
                 }, undefined),
                 path: "/table"
@@ -815,7 +843,7 @@ const appLayout = (0, _reactRouterDom.createBrowserRouter)([
             {
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _todoDefault.default), {}, void 0, false, {
                     fileName: "App.js",
-                    lineNumber: 47,
+                    lineNumber: 74,
                     columnNumber: 25
                 }, undefined),
                 path: "/todo"
@@ -825,7 +853,7 @@ const appLayout = (0, _reactRouterDom.createBrowserRouter)([
             children: "Page Not Found!"
         }, void 0, false, {
             fileName: "App.js",
-            lineNumber: 51,
+            lineNumber: 78,
             columnNumber: 22
         }, undefined)
     }
@@ -835,7 +863,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: appLayout
 }, void 0, false, {
     fileName: "App.js",
-    lineNumber: 56,
+    lineNumber: 83,
     columnNumber: 13
 }, undefined));
 var _c;
@@ -26604,21 +26632,86 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const Crousal = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-            children: "This is Crousal"
-        }, void 0, false, {
-            fileName: "code/Crousal.jsx",
-            lineNumber: 4,
-            columnNumber: 13
-        }, undefined)
+var _react = require("react");
+var _s = $RefreshSig$();
+const Crousal = ({ data = [] })=>{
+    _s();
+    const [currentPage, setCurrentPage] = (0, _react.useState)(0);
+    const handlePrev = ()=>{
+        if (currentPage > 0) setCurrentPage(currentPage - 1);
+    };
+    const handleNext = ()=>{
+        if (currentPage < data.length - 1) setCurrentPage(currentPage + 1);
+    };
+    const currentCard = data[currentPage];
+    if (data.length === 0) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: "No Cards available"
     }, void 0, false, {
         fileName: "code/Crousal.jsx",
-        lineNumber: 3,
+        lineNumber: 21,
+        columnNumber: 16
+    }, undefined);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: currentCard.title
+            }, void 0, false, {
+                fileName: "code/Crousal.jsx",
+                lineNumber: 26,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: currentCard.discription
+            }, void 0, false, {
+                fileName: "code/Crousal.jsx",
+                lineNumber: 27,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        onClick: handlePrev,
+                        disabled: currentPage === 0,
+                        children: "Prev"
+                    }, void 0, false, {
+                        fileName: "code/Crousal.jsx",
+                        lineNumber: 29,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        children: [
+                            currentPage + 1,
+                            " of ",
+                            data.length
+                        ]
+                    }, void 0, true, {
+                        fileName: "code/Crousal.jsx",
+                        lineNumber: 30,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        onClick: handleNext,
+                        disabled: currentPage === data.length - 1,
+                        children: "Next"
+                    }, void 0, false, {
+                        fileName: "code/Crousal.jsx",
+                        lineNumber: 31,
+                        columnNumber: 17
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "code/Crousal.jsx",
+                lineNumber: 28,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "code/Crousal.jsx",
+        lineNumber: 25,
         columnNumber: 9
     }, undefined);
 };
+_s(Crousal, "kF5zyetxw6M8BnbNC3J8pG5ccpI=");
 _c = Crousal;
 exports.default = Crousal;
 var _c;
@@ -26629,7 +26722,7 @@ $RefreshReg$(_c, "Crousal");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"cXBCH":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react":"jMk1U"}],"cXBCH":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$83a0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$83a0.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
