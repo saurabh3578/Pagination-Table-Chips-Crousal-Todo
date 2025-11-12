@@ -1,0 +1,27 @@
+{
+  "name": "pagination-table-chips-crousal-todo",
+  "version": "1.0.0",
+  "description": "Pagination-Table-Chips-Crousal-Todo by saurabh",
+  "scripts": {
+    "start": "parcel index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saurabh3578/Pagination-Table-Chips-Crousal-Todo.git"
+  },
+  "author": "Saurabh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saurabh3578/Pagination-Table-Chips-Crousal-Todo/issues"
+  },
+  "homepage": "https://github.com/saurabh3578/Pagination-Table-Chips-Crousal-Todo#readme",
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "6.23"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.1"
+  }
+}
