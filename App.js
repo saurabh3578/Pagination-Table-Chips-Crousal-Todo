@@ -4,7 +4,6 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom"
 import Chips from "./code/Chips"
 import Crousal from "./code/Crousal"
 import Pagination from "./code/Pagination"
-import Table from "./code/Table"
 import Todo from "./code/Todo"
 import Home from "./code/Home"
 import Header from "./code/Header"
@@ -65,10 +64,6 @@ const appLayout=createBrowserRouter([
             {
                 element:<Pagination/>,
                 path:"/pagination"
-            },
-            {
-                element:<Table/>,
-                path:"/table"
             },
             {
                 element:<Todo/>,
