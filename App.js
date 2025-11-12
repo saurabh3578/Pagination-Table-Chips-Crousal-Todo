@@ -1,17 +1,19 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
-import { createBrowserRouter } from "react-router-dom"
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom"
 import Chips from "./code/Chips"
 import Crousal from "./code/Crousal"
 import Pagination from "./code/Pagination"
 import Table from "./code/Table"
 import Todo from "./code/Todo"
 import Home from "./code/Home"
+import Header from "./code/Header"
 
 const App=()=>{
     return(
         <div>
-            <h1>This is app layout</h1>
+            <Header/>
+            <Outlet/>
         </div>
     )
 }
@@ -51,4 +53,4 @@ const appLayout=createBrowserRouter([
 ])
 
 const root=ReactDOM.createRoot(document.getElementById('root'))
-root.render(<App/>)
+root.render(<RouterProvider router={appLayout}/>)

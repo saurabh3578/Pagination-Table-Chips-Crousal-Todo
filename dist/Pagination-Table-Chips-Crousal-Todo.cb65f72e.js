@@ -740,18 +740,25 @@ var _todo = require("./code/Todo");
 var _todoDefault = parcelHelpers.interopDefault(_todo);
 var _home = require("./code/Home");
 var _homeDefault = parcelHelpers.interopDefault(_home);
+var _header = require("./code/Header");
+var _headerDefault = parcelHelpers.interopDefault(_header);
 const App = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-            children: "This is app layout"
-        }, void 0, false, {
-            fileName: "App.js",
-            lineNumber: 14,
-            columnNumber: 13
-        }, undefined)
-    }, void 0, false, {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 15,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 16,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true, {
         fileName: "App.js",
-        lineNumber: 13,
+        lineNumber: 14,
         columnNumber: 9
     }, undefined);
 };
@@ -760,7 +767,7 @@ const appLayout = (0, _reactRouterDom.createBrowserRouter)([
     {
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
             fileName: "App.js",
-            lineNumber: 21,
+            lineNumber: 23,
             columnNumber: 17
         }, undefined),
         path: "/",
@@ -768,7 +775,7 @@ const appLayout = (0, _reactRouterDom.createBrowserRouter)([
             {
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _homeDefault.default), {}, void 0, false, {
                     fileName: "App.js",
-                    lineNumber: 25,
+                    lineNumber: 27,
                     columnNumber: 25
                 }, undefined),
                 path: "/"
@@ -776,7 +783,7 @@ const appLayout = (0, _reactRouterDom.createBrowserRouter)([
             {
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _chipsDefault.default), {}, void 0, false, {
                     fileName: "App.js",
-                    lineNumber: 29,
+                    lineNumber: 31,
                     columnNumber: 25
                 }, undefined),
                 path: "/chips"
@@ -784,7 +791,7 @@ const appLayout = (0, _reactRouterDom.createBrowserRouter)([
             {
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _crousalDefault.default), {}, void 0, false, {
                     fileName: "App.js",
-                    lineNumber: 33,
+                    lineNumber: 35,
                     columnNumber: 25
                 }, undefined),
                 path: "/crousal"
@@ -792,7 +799,7 @@ const appLayout = (0, _reactRouterDom.createBrowserRouter)([
             {
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _paginationDefault.default), {}, void 0, false, {
                     fileName: "App.js",
-                    lineNumber: 37,
+                    lineNumber: 39,
                     columnNumber: 25
                 }, undefined),
                 path: "/pagination"
@@ -800,7 +807,7 @@ const appLayout = (0, _reactRouterDom.createBrowserRouter)([
             {
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _tableDefault.default), {}, void 0, false, {
                     fileName: "App.js",
-                    lineNumber: 41,
+                    lineNumber: 43,
                     columnNumber: 25
                 }, undefined),
                 path: "/table"
@@ -808,7 +815,7 @@ const appLayout = (0, _reactRouterDom.createBrowserRouter)([
             {
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _todoDefault.default), {}, void 0, false, {
                     fileName: "App.js",
-                    lineNumber: 45,
+                    lineNumber: 47,
                     columnNumber: 25
                 }, undefined),
                 path: "/todo"
@@ -818,15 +825,17 @@ const appLayout = (0, _reactRouterDom.createBrowserRouter)([
             children: "Page Not Found!"
         }, void 0, false, {
             fileName: "App.js",
-            lineNumber: 49,
+            lineNumber: 51,
             columnNumber: 22
         }, undefined)
     }
 ]);
 const root = (0, _clientDefault.default).createRoot(document.getElementById('root'));
-root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
+root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterProvider), {
+    router: appLayout
+}, void 0, false, {
     fileName: "App.js",
-    lineNumber: 54,
+    lineNumber: 56,
     columnNumber: 13
 }, undefined));
 var _c;
@@ -837,7 +846,7 @@ $RefreshReg$(_c, "App");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","react-dom/client":"hrvwu","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react-router-dom":"61z4w","./code/Chips":"h9MvW","./code/Crousal":"fdxnO","./code/Pagination":"cXBCH","./code/Table":"fLKVr","./code/Todo":"hqn87","./code/Home":"6yTRS"}],"dVPUn":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","react-dom/client":"hrvwu","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react-router-dom":"61z4w","./code/Chips":"h9MvW","./code/Crousal":"fdxnO","./code/Pagination":"cXBCH","./code/Table":"fLKVr","./code/Todo":"hqn87","./code/Home":"6yTRS","./code/Header":"gArXf"}],"dVPUn":[function(require,module,exports,__globalThis) {
 'use strict';
 module.exports = require("ee51401569654d91");
 
@@ -26503,21 +26512,77 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _s = $RefreshSig$();
 const Chips = ()=>{
+    _s();
+    const [input, setInput] = (0, _react.useState)("");
+    const [chips, setChips] = (0, _react.useState)([]);
+    const addChips = ()=>{
+        if (input.trim() === "") return;
+        setChips([
+            ...chips,
+            input
+        ]);
+        setInput("");
+    };
+    const deleteChips = (indexToDelete)=>{
+        setChips(chips.filter((_, index)=>index !== indexToDelete));
+    };
+    const keyDown = (e)=>{
+        if (e.key === "Enter") addChips();
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-            children: "This is Chips"
-        }, void 0, false, {
-            fileName: "code/Chips.jsx",
-            lineNumber: 4,
-            columnNumber: 13
-        }, undefined)
-    }, void 0, false, {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                type: "text",
+                value: input,
+                onChange: (e)=>setInput(e.target.value),
+                onKeyDown: keyDown
+            }, void 0, false, {
+                fileName: "code/Chips.jsx",
+                lineNumber: 26,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                onClick: addChips,
+                children: "Add"
+            }, void 0, false, {
+                fileName: "code/Chips.jsx",
+                lineNumber: 27,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: chips.map((chip, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        children: [
+                            chip,
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                onClick: ()=>deleteChips(index),
+                                children: "X"
+                            }, void 0, false, {
+                                fileName: "code/Chips.jsx",
+                                lineNumber: 33,
+                                columnNumber: 29
+                            }, undefined)
+                        ]
+                    }, index, true, {
+                        fileName: "code/Chips.jsx",
+                        lineNumber: 31,
+                        columnNumber: 25
+                    }, undefined))
+            }, void 0, false, {
+                fileName: "code/Chips.jsx",
+                lineNumber: 28,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true, {
         fileName: "code/Chips.jsx",
-        lineNumber: 3,
+        lineNumber: 25,
         columnNumber: 9
     }, undefined);
 };
+_s(Chips, "q/qt+y4qxRnL54+7eNjvw/wVg6s=");
 _c = Chips;
 exports.default = Chips;
 var _c;
@@ -26528,7 +26593,7 @@ $RefreshReg$(_c, "Chips");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"fdxnO":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react":"jMk1U"}],"fdxnO":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$52a3 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$52a3.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -26696,6 +26761,115 @@ $RefreshReg$(_c, "Home");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}]},["icAAj","blcJa"], "blcJa", "parcelRequire795e", {}, null, null, "http://localhost:1234")
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"gArXf":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$ccda = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$ccda.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$ccda.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
+const Header = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "header-component",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        to: "/chips",
+                        children: "Chips"
+                    }, void 0, false, {
+                        fileName: "code/Header.jsx",
+                        lineNumber: 7,
+                        columnNumber: 21
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "code/Header.jsx",
+                    lineNumber: 7,
+                    columnNumber: 17
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        to: "/crousal",
+                        children: "Crousal"
+                    }, void 0, false, {
+                        fileName: "code/Header.jsx",
+                        lineNumber: 8,
+                        columnNumber: 21
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "code/Header.jsx",
+                    lineNumber: 8,
+                    columnNumber: 17
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        to: "/pagination",
+                        children: "Pagination"
+                    }, void 0, false, {
+                        fileName: "code/Header.jsx",
+                        lineNumber: 9,
+                        columnNumber: 21
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "code/Header.jsx",
+                    lineNumber: 9,
+                    columnNumber: 17
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        to: "/table",
+                        children: "Table"
+                    }, void 0, false, {
+                        fileName: "code/Header.jsx",
+                        lineNumber: 10,
+                        columnNumber: 21
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "code/Header.jsx",
+                    lineNumber: 10,
+                    columnNumber: 17
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        to: "/todo",
+                        children: "Todo"
+                    }, void 0, false, {
+                        fileName: "code/Header.jsx",
+                        lineNumber: 11,
+                        columnNumber: 21
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "code/Header.jsx",
+                    lineNumber: 11,
+                    columnNumber: 17
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "code/Header.jsx",
+            lineNumber: 6,
+            columnNumber: 13
+        }, undefined)
+    }, void 0, false, {
+        fileName: "code/Header.jsx",
+        lineNumber: 5,
+        columnNumber: 9
+    }, undefined);
+};
+_c = Header;
+exports.default = Header;
+var _c;
+$RefreshReg$(_c, "Header");
+
+  $parcel$ReactRefreshHelpers$ccda.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react-router-dom":"61z4w"}]},["icAAj","blcJa"], "blcJa", "parcelRequire795e", {}, null, null, "http://localhost:1234")
 
 //# sourceMappingURL=Pagination-Table-Chips-Crousal-Todo.cb65f72e.js.map
